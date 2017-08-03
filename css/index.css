@@ -40,12 +40,12 @@ body {
     display: none;
     position: absolute;
     width: 0.74rem;
-    height:0.6rem;
+    height:0.84rem;
     bottom: 20px;
     left: 50%;
     margin-left: -0.37rem;
-    animation: moveUp 1.5s linear infinite;
-    -webkit-animation: moveUp 1.5s linear infinite;
+    animation: moveUp 1s linear infinite;
+    -webkit-animation: moveUp 1s linear infinite;
 }
 .bg{
     position: relative;
@@ -361,13 +361,13 @@ button div{
 @keyframes moveUp {
     0% {}
     100% {
-        transform: translateY(100%);
+        transform: translateY(0.3rem);
     }
 }
 @-webkit-keyframes moveUp {
     0% {}
     100% {
-        -webkit-transform: translateY(100%);
+        -webkit-transform: translateY(0.3rem);
     }
 }
 @keyframes mysec {
@@ -420,6 +420,7 @@ button div{
     height: 5.17rem;
 }
 .re{
+    display: none;
     position: relative;
     // background: url(../images/result_lv.png);
     // background-size: 100% 100%;
