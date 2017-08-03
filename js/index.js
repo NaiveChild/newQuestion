@@ -117,30 +117,29 @@ $(function() {
     });
 
   
-    $('#save').click(function () {
-        if ($('.answer9 input').val() == "") return;
-        answers.changsuo = [];
-        answers.qudao = [];
-        $('#changsuo button div:visible').each(function (index, el) {
-            answers.changsuo.push($(this).parent().children('span').text())
-        });
-        $('#qudao button div:visible').each(function (index, el) {
-            answers.qudao.push($(this).parent().children('span').text())
-        });
-        console.log(answers);
-        $('.re').show();
-        //根据答案来进行结果展示
-        //$(".result").html(UName);
-        GetResult();
-        GetResultImage();
-        UploadAnswer();
+    // $('#save').click(function () {
+    //     if ($('.answer9 input').val() == "") return;
+    //     answers.changsuo = [];
+    //     answers.qudao = [];
+    //     $('#changsuo button div:visible').each(function (index, el) {
+    //         answers.changsuo.push($(this).parent().children('span').text())
+    //     });
+    //     $('#qudao button div:visible').each(function (index, el) {
+    //         answers.qudao.push($(this).parent().children('span').text())
+    //     });
+    //     console.log(answers);
+    //     //根据答案来进行结果展示
+    //     //$(".result").html(UName);
+    //     GetResult();
+    //     GetResultImage();
+    //     UploadAnswer();
 
-        myswiper.unlockSwipeToNext();
-        setTimeout(function () {
-            myswiper.slideNext();
-            // myswiper.lockSwipeToNext();
-        }, 600);
-    })
+    //     myswiper.unlockSwipeToNext();
+    //     setTimeout(function () {
+    //         myswiper.slideNext();
+    //         // myswiper.lockSwipeToNext();
+    //     }, 600);
+    // })
     $('#saveImage').click(function () {
         return;
         var myCanvas = document.getElementById("maincanvas");
@@ -230,30 +229,30 @@ $(function() {
     }
 
 
-    //最后要删掉的
-    // $('.name').blur(function(){
-    //     myswiper.update();
-    // });
-    // $('#save').click(function(){
-    //     if ($('.answer9 input').val() == "") return;
-    //     answers.changsuo = [];
-    //     answers.qudao = [];
-    //     $('#changsuo button div:visible').each(function (index, el) {
-    //         answers.changsuo.push($(this).parent().children('span').text())
-    //     });
-    //     $('#qudao button div:visible').each(function (index, el) {
-    //         answers.qudao.push($(this).parent().children('span').text())
-    //     });
-    //     console.log(answers);
-    //     GetResult();
-    //     GetResultImage();
-    //     UploadAnswer();
-    //     $('#save').text("生成图片中...");
-    //     setTimeout(function () {
-    //         $('.swiper-container').hide();
-    //         $('.re').show();
-    //     }, 2500); 
-    // })
+    //把最后一页拿出来的代码
+    $('.name').blur(function(){
+        myswiper.update();
+    });
+    $('#save').click(function(){
+        if ($('.answer9 input').val() == "") return;
+        answers.changsuo = [];
+        answers.qudao = [];
+        $('#changsuo button div:visible').each(function (index, el) {
+            answers.changsuo.push($(this).parent().children('span').text())
+        });
+        $('#qudao button div:visible').each(function (index, el) {
+            answers.qudao.push($(this).parent().children('span').text())
+        });
+        console.log(answers);
+        GetResult();
+        GetResultImage();
+        UploadAnswer();
+        $('#save').text("生成图片中...");
+        setTimeout(function () {
+            $('.swiper-container').hide();
+            $('.re').show();
+        }, 2500); 
+    })
     
 
 })
